@@ -9,14 +9,11 @@ function driversWithRevenueOver(drivers, revenue) {
 
 function driverNamesWithRevenueOver(drivers, revenue) {
 
-  return(driverlist.map(function(driver) {
+    return drivers.filter(function(driver) {
 
-    const firstname = driver.split(' ')[0];
-    const lastname = driver.split(' ')[1];
-
-    return({ firstName: firstname, lastName: lastname }); }
-  ));
-}
+      return driver.revenue > revenue;
+    });
+  }
 
 function attributesToPhrase(driverlist) {
 
