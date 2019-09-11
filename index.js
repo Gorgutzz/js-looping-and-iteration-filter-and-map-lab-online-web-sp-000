@@ -20,9 +20,8 @@ function exactMatch (drivers, object) {
     return(drivers.filter(function (driver) {
       let match = false;
 
-      for (const key in object)
-      {
-        doesItMatch = driver[key] === jsObject[key];
+      for (const key in object) {
+        match = driver[key] === object[key];
       }
 
       return(doesItMatch);
