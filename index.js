@@ -15,4 +15,18 @@ function driverNamesWithRevenueOver(drivers, revenue) {
     });
   }
 
-function exactMatch(drivers, object)
+function exactMatch (drivers, object)
+  {
+    return(driverObjectsArray.filter(function (driver)
+    {
+      let doesItMatch = false;
+
+      for (const key in jsObject)
+      {
+        doesItMatch = driver[key] === jsObject[key];
+      }
+
+      return(doesItMatch);
+    }
+    ));
+  }
