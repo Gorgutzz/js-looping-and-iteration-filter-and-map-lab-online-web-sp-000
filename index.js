@@ -24,7 +24,7 @@ function exactMatch (drivers, object) {
         match = driver[key] === object[key];
       }
 
-      return(doesItMatch);
+      return(match);
     }
     ));
   }
