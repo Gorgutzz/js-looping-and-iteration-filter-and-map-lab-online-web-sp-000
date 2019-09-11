@@ -9,16 +9,9 @@ function driversWithRevenueOver(drivers, revenue) {
 
 function driverNamesWithRevenueOver(drivers, revenue) {
 
-    return drivers.filter(function(driver) {
+  return driversWithRevenueOver(drivers, revenue).map(function (driver) {
 
-      return driver.revenue > revenue;
+      return driver.name;
     });
   }
 
-function attributesToPhrase(driverlist) {
-
-  return(driverlist.map(function(driver) {
-
-    return(`${driver.name} is from ${driver.hometown}`); }
-  ));
-}
